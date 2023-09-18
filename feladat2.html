@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main2.js"></script>
+    <title>2.feladat</title>
+</head>
+<body>
+    <h1>2. feladat 3 beviteli mező:</h1>
+
+    <label>Név:</label>
+    <input type="text"><br><br>
+
+    <label>Hely:</label>
+    <input type="text"><br><br>
+
+    <label>Dátum:</label>
+    <input type="text"><br><br>
+
+    
+    <script>
+        function changeColorToGreen(input) {
+            input.style.color = 'green';
+        }
+        
+        function changeColorToBlack(input) {
+            input.style.color = 'black';
+        }
+        
+        let inputFields = document.querySelectorAll('input[type="text"]');
+        
+        for (let i = 0; i < inputFields.length; i++) {
+            inputFields[i].addEventListener('focus', function() {changeColorToGreen(this);});
+        
+            inputFields[i].addEventListener('blur', function() {changeColorToBlack(this);});
+        }
+    </script>
+</body>
+</html>
